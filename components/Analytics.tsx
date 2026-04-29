@@ -75,9 +75,8 @@ function CustomTooltip({ active, payload, label }: { active?: boolean; payload?:
 }
 
 export default function Analytics({ sessions }: Props) {
-  const last7 = getLast7Days();
-
   const dailyData = useMemo(() => {
+    const last7 = getLast7Days();
     const counts: Record<string, number> = {};
     for (const s of sessions) {
       if (s.mode === "pomodoro") counts[s.date] = (counts[s.date] ?? 0) + 1;
@@ -90,7 +89,7 @@ export default function Analytics({ sessions }: Props) {
         count: counts[date] ?? 0,
       };
     });
-  }, [sessions, last7]);
+  }, [sessions]);
 
   const totalToday = dailyData[6]?.count ?? 0;
   const totalWeek = dailyData.reduce((s, d) => s + d.count, 0);
