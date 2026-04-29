@@ -69,7 +69,7 @@ function CustomTooltip({ active, payload, label }: { active?: boolean; payload?:
   return (
     <div className="rounded-lg bg-gray-800 px-3 py-2 text-xs text-white shadow-lg ring-1 ring-white/10">
       <p className="font-medium">{label}</p>
-      <p className="text-white/60">{payload[0].value} pomodoro{payload[0].value !== 1 ? "s" : ""}</p>
+      <p className="text-white/60">{payload[0].value} Pomodoro{payload[0].value !== 1 ? "s" : ""}</p>
     </div>
   );
 }
@@ -201,7 +201,7 @@ export default function Analytics({ sessions }: Props) {
                   {week.map((cell) => (
                     <div
                       key={cell.date}
-                      title={`${cell.date}: ${cell.count} pomodoro${cell.count !== 1 ? "s" : ""}`}
+                      title={`${cell.date}: ${cell.count} Pomodoro${cell.count !== 1 ? "s" : ""}`}
                       className="h-3 w-3 rounded-[2px] transition-colors"
                       style={{ backgroundColor: heatColor(cell.count) }}
                     />

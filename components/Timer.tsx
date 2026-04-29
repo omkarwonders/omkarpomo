@@ -122,7 +122,7 @@ export default function Timer({ onSessionComplete }: TimerProps) {
             stroke="rgba(255,255,255,0.1)"
             strokeWidth="8"
           />
-          <motion.circle
+          <circle
             cx="140"
             cy="140"
             r="120"
