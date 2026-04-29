@@ -111,7 +111,7 @@ export default function Timer() {
         </svg>
 
         {/* Time display */}
-        <div className="absolute flex flex-col items-center select-none">
+        <div className="absolute flex flex-col items-center">
           <span className="text-6xl font-extralight tracking-widest text-white tabular-nums">
             {minutes}:{seconds}
           </span>
